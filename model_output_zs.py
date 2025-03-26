@@ -109,7 +109,7 @@ if __name__ == "__main__":
                 output_np = output.cpu().numpy()
                 
                 # 출력 feature map을 numpy 파일로 저장
-                output_filename = f"pytorch_feature_{image_basename}_{size}_{weight_name.split('_')[0]}.npy"
+                output_filename = f"resnet_feature_{image_basename}_{size}_{weight_name.split('_')[0]}.npy"
                 output_path = os.path.join("outputs/feature_map", output_filename)
                 np.save(output_path, output_np)
                 print(f"[INFO] Size {size} feature map saved -> {output_path}")

@@ -104,7 +104,7 @@ if __name__ == '__main__':
         for w_idx, weight in enumerate(weight_list):
             weight_basename = get_weight_basename(weight)
             # Resnet PyTorch feature map
-            resnet_pt_path = os.path.join("outputs/feature_map", f"pytorch_feature_{image_name}_{size}_{weight_basename}.npy")
+            resnet_pt_path = os.path.join("outputs/feature_map", f"resnet_feature_{image_name}_{size}_{weight_basename}.npy")
             # Resnet TRT feature map
             resnet_trt_path = os.path.join("outputs/feature_map", f"trt_feature_{weight_basename}_{size}_{image_name}.npy")
             

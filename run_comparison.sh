@@ -15,8 +15,11 @@ for IMAGE_FILE in "${IMAGES[@]}"; do
     echo "✅ Running TensorRT Inference for image: $IMAGE_FILE"
     ./cpp_project/model_output/build/trt_feature_extractor "$IMAGE_FILE" ${SIZES[*]} --weights ${WEIGHTS[*]}
 
-    echo "✅ Comparing Features for image: $IMAGE_FILE"
+    echo "✅ Comparing Features with ViT for image: $IMAGE_FILE"
     python3 compare_features.py --image "$IMAGE_FILE" --sizes ${SIZES[*]} --weights ${WEIGHTS[*]}
+
+    echo "✅ Comparing Features between ResNet for image: $IMAGE_FILE"
+    python3 compare_features_between_resnet.py --image "$IMAGE_FILE" --sizes ${SIZES[*]} --weights ${WEIGHTS[*]}
 
 done
 
