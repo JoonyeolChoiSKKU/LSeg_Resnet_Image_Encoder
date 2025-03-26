@@ -1,0 +1,36 @@
+# Python 캐시 파일들
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 빌드/배포 관련 파일들
+build/
+dist/
+*.egg-info/
+
+# 가상환경
+env/
+venv/
+.venv/
+
+# 로그, 커버리지, 테스트 파일들
+*.log
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# IDE/편집기 설정
+.vscode/
+.idea/
+
+# Jupyter Notebook 체크포인트
+.ipynb_checkpoints
+
+# 모델 체크포인트 (대용량 파일)
+*.ckpt
+*.onnx
+*.trt
+
+outputs/
+inputs/
