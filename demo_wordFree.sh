@@ -1,0 +1,1 @@
+python3 demo_wordFree.py --image images/cat3.jpeg --onnx outputs/models/lseg_img_enc_rn101_fss_384.onnx --size 384
